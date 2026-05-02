@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Xtartmf    Products &amp; Pricing.   Xtartt, Xmooth, Xtra, Xperience. Built inside. Scaled outside.">
+<title>Xtartmf,Built inside. Scaled outside.</title>
+<link rel="stylesheet" href="style.css">
+<script src="config.js"></script>
+<style>
+  /* Solutions-page extras */
+  .solutions-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:24px;border-top:2px solid var(--ink)}
+  .sol-card{padding:36px 36px 36px 0;border-bottom:1px solid var(--rule);border-right:1px solid var(--rule);display:flex;flex-direction:column}
+  .sol-card:nth-child(2n){border-right:none;padding-right:0;padding-left:36px}
+  .sol-tier{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+  .sol-tier-dot{width:6px;height:6px;background:var(--green);border-radius:50%}
+  .sol-name{font-family:'Source Serif 4',serif;font-weight:600;font-size:28px;color:var(--ink);letter-spacing:-.015em;margin-bottom:4px}
+  .sol-tagline{font-size:14px;color:var(--ink-mute);margin-bottom:18px;font-style:italic}
+  .sol-price{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;background:var(--green);color:#fff;padding:4px 10px;margin-bottom:18px;letter-spacing:.03em}
+  .sol-price.sol-price--custom{background:var(--ink)}
+  .sol-desc{font-size:15px;line-height:1.6;color:var(--ink-body);margin-bottom:18px;flex-grow:1}
+  .sol-includes{border-top:1px solid var(--rule);padding-top:14px;font-size:12.5px;color:var(--ink-mute);line-height:1.6}
+  .sol-includes-label{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin-bottom:6px}
+  .sol-cta{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-size:13px;font-weight:600;color:var(--green);border-bottom:1px solid var(--green);padding-bottom:2px;transition:color .2s,border-color .2s}
+  .sol-cta:hover{color:var(--green-deep);border-color:var(--green-deep)}
+  .contact-form{max-width:680px;margin-top:36px}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+  .form-field{display:flex;flex-direction:column;gap:6px}
+  .form-field label{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+  .form-field input,.form-field select,.form-field teXtartea{font-family:'Inter',sans-serif;font-size:14px;color:var(--ink);background:var(--bg);border:1px solid var(--rule);padding:10px 14px;border-radius:2px;outline:none;transition:border-color .2s}
+  .form-field input:focus,.form-field select:focus,.form-field teXtartea:focus{border-color:var(--green)}
+  .form-field teXtartea{resize:vertical;min-height:100px}
+  .form-submit{background:var(--ink);color:#fff;padding:13px 28px;font-size:14px;font-weight:600;border:none;cursor:pointer;transition:background .2s;margin-top:4px}
+  .form-submit:hover{background:var(--green-deep)}
+  .form-field input[type="file"]{padding:8px 14px;font-size:13px;cursor:pointer;color:var(--ink-mute)}
+  @media(max-width:768px){
+    .solutions-grid{grid-template-columns:1fr}
+    .sol-card{padding:28px 0!important;border-right:none!important}
+    .form-row{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body id="top">
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="topbar" id="topbar">
+  <div class="container topbar-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>Xtartmf</span>
+      <span class="brand-tag">/ Built inside. Scaled outside.</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="topnav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <nav class="topnav" id="topnav" aria-label="Primary">
+      <a href="index.html">What We Do</a>
+      <a href="process.html">How We Do It</a>
+      <a href="about.html">Who We Are</a>
+      <a href="solutions.html" class="is-active">What We Offer</a>
+      <a href="xstart.html" class="topnav-secondary">Try Xtart</a>
+      <a href="javascript:void(0)" data-cal-link="anubhav-chaturvedi-uzytoo/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view"}' class="topnav-cta">Book a Call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" aria-label="Solutions">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="kicker">Products &amp; Pricing</div>
+        <h1>Four products. Four segments. <span class="accent">One distribution infrastructure</span>.</h1>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="num">4</div>
+          <div class="label">Products    one for each segment you're in</div>
+        </div>
+        <div class="stat">
+          <div class="num">₹999<span class="unit">+</span></div>
+          <div class="label">Starting point      Xtartt for IFAs</div>
+        </div>
+      </div>
+    </div>
+    <p class="hero-summary">
+      Each product maps to a specific segment and solves that segment's actual problem. Pick the one that fits. First call is free and genuinely diagnostic.
+    </p>
+  </div>
+</section>
+
+<!-- THE FOUR SOLUTIONS -->
+<section id="plans" aria-labelledby="plans-h">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num">SECTION <span class="slash">/</span> 01</div>
+      <div>
+        <h2 id="plans-h">The Xtartmf <span class="accent">product range</span>.</h2>
+        <p class="section-lede">Pick the product that matches your segment. Every engagement starts with a 30-minute call    free, structured, honest about fit.</p>
+      </div>
+    </div>
+
+    <div class="solutions-grid">
+
+      <!--   Xtartt -->
+      <article class="sol-card">
+        <div class="sol-tier"><span class="sol-tier-dot" aria-hidden="true"></span>Tier 01,IFAs &amp; Small Distributors</div>
+        <div class="sol-name">  Xtartt</div>
+        <div class="sol-tagline">Get running. First transaction in 30 days.</div>
+        <span class="sol-price">Starting at ₹999 (one-time)</span>
+        <p class="sol-desc">
+          From zero to live as an MFD. We walk through the full setup: BSE StAR MF onboarding, UCC structure, KYC, first transaction. Then you're on your own with a clean playbook.
+        </p>
+        <div class="sol-includes">
+          <div class="sol-includes-label">Includes</div>
+          Distributor checklist,ARN walkthrough,UCC mapping,First-transaction support
+        </div>
+        <a href="#contact" class="sol-cta">Start with   Xtartt <span aria-hidden="true">→</span></a>
+      </article>
+
+      <!-- XMOOTH -->
+      <article class="sol-card">
+        <div class="sol-tier"><span class="sol-tier-dot" aria-hidden="true"></span>Tier 02,Mid-size Distributors &amp; RIA Platforms</div>
+        <div class="sol-name">Xmooth</div>
+        <div class="sol-tagline">Fix what's breaking. Scale what works.</div>
+        <span class="sol-price sol-price--custom">Scoped per engagement</span>
+        <p class="sol-desc">
+          You've built something. It works    but not at scale yet. We fix the operational bottlenecks, design the scaling path, and help you ship without a full product team.
+        </p>
+        <div class="sol-includes">
+          <div class="sol-includes-label">Includes</div>
+          Workflow audit,Gap analysis,Tooling roadmap,AI servicing setup
+        </div>
+        <a href="#contact" class="sol-cta">Start with Xmooth <span aria-hidden="true">→</span></a>
+      </article>
+
+      <!-- XTRA -->
+      <article class="sol-card">
+        <div class="sol-tier"><span class="sol-tier-dot" aria-hidden="true"></span>Tier 03,Brokerages, AMCs &amp; Wealth Platforms</div>
+        <div class="sol-name">Xtra</div>
+        <div class="sol-tagline">Infrastructure-grade. No shortcuts.</div>
+        <span class="sol-price sol-price--custom">Customised engagement</span>
+        <p class="sol-desc">
+          Integrating with BSE StAR MF, NSE MF, RTAs at scale. We help you design infrastructure that doesn't break at 50K transactions a day    mandate flows, NAV cutoffs, UCC architecture, SLA management, and distributor intelligence layers.
+        </p>
+        <div class="sol-includes">
+          <div class="sol-includes-label">Includes</div>
+          MF integration architecture,SLA &amp; cutoff design,Mandate flow redesign,Distributor intelligence design
+        </div>
+        <a href="#contact" class="sol-cta">Start with Xtra <span aria-hidden="true">→</span></a>
+      </article>
+
+      <!-- XPERIENCE -->
+      <article class="sol-card">
+        <div class="sol-tier"><span class="sol-tier-dot" aria-hidden="true"></span>Tier 04,Founders Building Wealthtech</div>
+        <div class="sol-name">Xperience</div>
+        <div class="sol-tagline">End-to-end. From idea to Series A.</div>
+        <span class="sol-price sol-price--custom">Scoped per engagement</span>
+        <p class="sol-desc">
+          Running a B2C investing app, AI advisory layer, or distributor SaaS. We bring perspective from inside the infrastructure you're building on    product architecture, distribution strategy, regulatory positioning, and technical strategy.
+        </p>
+        <div class="sol-includes">
+          <div class="sol-includes-label">Includes</div>
+          Product architecture,Distribution strategy,Regulatory positioning,Technical diligence support
+        </div>
+        <a href="#contact" class="sol-cta">Start with Xperience <span aria-hidden="true">→</span></a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section--soft" aria-labelledby="faq-h">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num">SECTION <span class="slash">/</span> 02</div>
+      <div>
+        <h2 id="faq-h">Practical <span class="accent">questions</span>.</h2>
+        <p class="section-lede">The questions most prospective clients ask on the first call. Answered directly.</p>
+      </div>
+    </div>
+    <div class="faq-grid">
+      <details>
+        <summary>What if I'm just starting?</summary>
+        <div class="answer">  Xtartt is built for that. It's a quick engagement    you walk away with a working setup and a clear first-steps roadmap. Low cost. High clarity.</div>
+      </details>
+      <details>
+        <summary>How's pricing determined?</summary>
+        <div class="answer">  Xtartt is fixed price (₹999). Xmooth, Xtra, and Xperience are scoped after the first call. We don't quote fixed rates blind    different companies have different problems. The scoping call is free and non-binding.</div>
+      </details>
+      <details>
+        <summary>What about AI?</summary>
+        <div class="answer">AI ships as a feature inside an engagement where it makes sense    not as a separate pitch. A client review generator, compliance assistant, or predictive model. Shipped and real, not theoretical.</div>
+      </details>
+      <details>
+        <summary>Do you sign NDAs?</summary>
+        <div class="answer">Always. NDA first, before any conversation. Client information stays private. We don't use engagements as marketing material without permission.</div>
+      </details>
+      <details>
+        <summary>How fast can we start?</summary>
+        <div class="answer">First call typically happens within a week. Diagnostics and audits usually start within 2-3 weeks. Build engagements take longer depending on our capacity    we're transparent about that from day one.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / BOOK A CALL -->
+<section class="cta-section section--last" id="contact" aria-labelledby="contact-h">
+  <div class="container">
+    <div class="cta-grid">
+      <div>
+        <div class="kicker">Book a 30-minute scoping call</div>
+        <h2 id="contact-h">Tell us what you're trying to fix. We'll tell you <span class="accent">if we're the right call</span>.</h2>
+        <p class="lede">Free. No commitment. By the end of the call, you'll know whether this engagement makes sense    and so will we.</p>
+
+        <form class="contact-form" id="scoping-form">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="fname">Name</label>
+              <input type="text" id="fname" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-field">
+              <label for="femail">Email</label>
+              <input type="email" id="femail" name="email" placeholder="you@firm.com" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="fsegment">Segment</label>
+              <select id="fsegment" name="segment">
+                <option value="">Select your segment…</option>
+                <option value="ifa">Independent IFA / Small Distributor —  Xtartt</option>
+                <option value="mid">Mid-size Distributor / RIA Platform — Xmooth</option>
+                <option value="brokerage">Brokerage / AMC / Wealth Platform — Xtra</option>
+                <option value="founder">Founder building on the rails — Xperience</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="forg">Organisation</label>
+              <input type="text" id="forg" name="org" placeholder="Firm or company name">
+            </div>
+          </div>
+          <div class="form-field" style="margin-bottom:20px">
+            <label for="fmsg">What's the core problem?</label>
+            <teXtartea id="fmsg" name="message" placeholder="Briefly describe what you're working on or stuck on…"></teXtartea>
+          </div>
+          <div class="form-field" style="margin-bottom:20px">
+            <label for="fbrief">Attach a brief (optional)</label>
+            <input type="file" id="fbrief" name="attachment" accept=".pdf,.doc,.docx,.ppt,.pptx,.txt">
+          </div>
+          <button type="submit" class="form-submit" id="scoping-submit">Send request →</button>
+        </form>
+      </div>
+      <div class="cta-card" style="align-self:start">
+        <div class="label">Direct Contact</div>
+        <h4>Other ways to reach the Firm.</h4>
+        <a href="javascript:void(0)" data-cal-link="anubhav-chaturvedi-uzytoo/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view"}' class="cta-link"><span>Book a scoping call</span><span class="arrow" aria-hidden="true">→</span></a>
+        <a href="index.html" class="cta-link"><span>What We Do</span><span class="arrow" aria-hidden="true">→</span></a>
+        <a href="process.html" class="cta-link"><span>How We Work</span><span class="arrow" aria-hidden="true">→</span></a>
+        <a href="about.html" class="cta-link"><span>About the Firm</span><span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"></span><span>Xtartmf</span><span class="brand-tag">/ Built inside. Scaled outside.</span></a>
+        <p class="footer-tag">Built inside. Scaled outside.<br>Operator-led consulting for India's mutual fund distribution. A team of ex Exchanges and MIIs, IIT, and IIM professionals.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-label">Pages</div>
+        <a href="index.html">What We Do</a>
+        <a href="process.html">How We Do It</a>
+        <a href="about.html">Who We Are</a>
+        <a href="solutions.html">What We Offer</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-label">Contact</div>
+        <a href="javascript:void(0)" data-cal-link="anubhav-chaturvedi-uzytoo/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view"}'>Book a call</a>
+        <a href="javascript:void(0)" data-cal-link="anubhav-chaturvedi-uzytoo/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view"}'>Book a call</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Xtartmf,Independent Consulting Firm</span>
+      <span>Mumbai, India</span>
+    </div>
+    <p class="footer-disclaimer">Xtartmf is an independent consulting firm. Engagements are taken on a strict no-conflict basis. All views and content on this site represent the position of the Firm.</p>
+  </div>
+</footer>
+<script>
+(function(){
+  document.getElementById('year').textContent=new Date().getFullYear();
+  var tb=document.getElementById('topbar'),ls=false;
+  function sc(){var s=window.scrollY>8;if(s!==ls){tb.classList.toggle('is-scrolled',s);ls=s;}}
+  window.addEventListener('scroll',sc,{passive:true});sc();
+  var tog=document.getElementById('menuToggle'),nav=document.getElementById('topnav');
+  if(tog&&nav){tog.addEventListener('click',function(){var o=nav.classList.toggle('is-open');tog.setAttribute('aria-expanded',o);});nav.querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){nav.classList.remove('is-open');tog.setAttribute('aria-expanded','false');});});}
+  var form=document.getElementById('scoping-form');
+  var btn=document.getElementById('scoping-submit');
+  if(form){form.addEventListener('submit',function(e){
+    e.preventDefault();
+    btn.textContent='Sending…';btn.disabled=true;
+    var data=new FormData(form);
+    data.append('access_key',XtartMF.formKey);
+    fetch('https://api.web3forms.com/submit',{method:'POST',body:data})
+      .then(function(r){return r.json();})
+      .then(function(res){
+        if(res.success){btn.textContent='Sent. The Firm will be in touch shortly.';}
+        else{btn.textContent='Something went wrong. Please try again.';btn.disabled=false;}
+      })
+      .catch(function(){btn.textContent='Something went wrong. Please try again.';btn.disabled=false;});
+  });}
+})();
+</script>
+<script type="text/javascript">(function(C,A,L){let p=function(a,ar){a.q.push(ar);};let d=C.document;C.Cal=C.Cal||function(){let cal=C.Cal;let ar=arguments;if(!cal.loaded){cal.ns={};cal.q=cal.q||[];d.head.appendChild(d.createElement("script")).src=A;cal.loaded=true;}if(ar[0]===L){const api=function(){p(api,arguments);};const namespace=ar[1];api.q=api.q||[];if(typeof namespace==="string"){cal.ns[namespace]=cal.ns[namespace]||api;p(cal.ns[namespace],ar);p(cal,["initNamespace",namespace]);}else p(cal,ar);return;}p(cal,ar);};})(window,"https://app.cal.com/embed/embed.js","init");Cal("init","30min",{origin:"https://app.cal.com"});Cal.ns["30min"]("floatingButton",{"calLink":"anubhav-chaturvedi-uzytoo/30min","buttonText":"Book a Call","config":{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}});Cal.ns["30min"]("ui",{"hideEventTypeDetails":false,"layout":"month_view"});</script>
+</body>
+</html>

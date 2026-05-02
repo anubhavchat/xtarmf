@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Xtart by Xtartmf   The practice platform for India's independent financial distributors. You run on Xtart. Your clients invest on SimpleMF.">
+<title>Xtartmf / Xtart   For Independent Financial Distributors</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .two-sided{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:2px solid var(--ink);margin-top:32px}
+  .side-card{padding:32px 28px;border-right:1px solid var(--rule)}
+  .side-card:last-child{border-right:none}
+  .side-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+  .side-label.mfd{color:var(--green)}
+  .side-label.investor{color:var(--ink-mute)}
+  .side-title{font-family:'Source Serif 4',serif;font-size:28px;font-weight:400;color:var(--ink);letter-spacing:-.02em;line-height:1.15;margin-bottom:12px}
+  .side-body{font-size:15px;color:var(--ink-body);line-height:1.6}
+  .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:24px;border-top:2px solid var(--ink)}
+  .price-card{padding:36px 28px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);display:flex;flex-direction:column}
+  .price-card:last-child{border-right:none}
+  .price-tier{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:12px}
+  .price-amount{font-family:'Source Serif 4',serif;font-size:42px;font-weight:400;color:var(--ink);letter-spacing:-.025em;line-height:1;margin-bottom:4px}
+  .price-sub{font-size:13px;color:var(--ink-mute);margin-bottom:24px}
+  .price-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--rule);font-size:14px;color:var(--ink-body)}
+  .price-row:last-of-type{border-bottom:none}
+  .price-row .tick{color:var(--green);font-weight:700}
+  .price-row .cross{color:var(--rule)}
+  .price-cta-btn{display:block;margin-top:24px;text-align:center;background:var(--ink);color:#fff;padding:12px;font-size:13px;font-weight:600;transition:background .2s}
+  .price-cta-btn:hover{background:var(--green-deep)}
+  .price-card.featured{background:var(--ink)}
+  .price-card.featured .price-tier{color:var(--green-light)}
+  .price-card.featured .price-amount{color:#fff}
+  .price-card.featured .price-sub{color:#8a9994}
+  .price-card.featured .price-row{color:#d0dbd6;border-color:var(--rule-dark)}
+  .price-card.featured .price-row .cross{color:#3a4a44}
+  .price-card.featured .price-cta-btn{background:var(--green)}
+  .price-card.featured .price-cta-btn:hover{background:var(--green-deep)}
+  .feature-list{list-style:none;margin-top:16px}
+  .feature-list li{padding:9px 0;border-bottom:1px solid var(--rule);font-size:14px;color:var(--ink-body);line-height:1.5}
+  .feature-list--dark li{border-color:var(--rule-dark);color:#d0dbd6}
+  .testimonial{border-left:3px solid var(--green);padding:20px 28px;background:rgba(255,255,255,.5);margin-top:32px;max-width:680px}
+  .testimonial p{font-family:'Source Serif 4',serif;font-size:19px;line-height:1.5;color:var(--ink);font-style:italic}
+  .testimonial cite{display:block;margin-top:10px;font-size:13px;color:var(--ink-mute);font-style:normal}
+  .cta-pair{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px;align-items:center}
+  .btn-primary{background:var(--green);color:#fff;padding:13px 28px;font-size:14px;font-weight:600;border-radius:999px;transition:background .2s;white-space:nowrap}
+  .btn-primary:hover{background:var(--green-deep)}
+  .btn-ghost{border:1.5px solid var(--green);color:var(--green);padding:12px 24px;font-size:14px;font-weight:600;border-radius:999px;transition:background .2s,color .2s;white-space:nowrap}
+  .btn-ghost:hover{background:var(--green);color:#fff}
+  .platform-badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:4px;margin-bottom:16px}
+  .badge-mfd{background:var(--green);color:#fff}
+  .badge-investor{background:var(--ink);color:#fff}
+  @media(max-width:768px){
+    .two-sided{grid-template-columns:1fr}
+    .side-card{border-right:none;border-bottom:1px solid var(--rule)}
+    .side-card:last-child{border-bottom:none}
+    .pricing-grid{grid-template-columns:1fr}
+    .price-card{border-right:none}
+  }
+</style>
+</head>
+<body id="top">
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="topbar" id="topbar">
+  <div class="container topbar-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>Xtartmf</span>
+      <span class="brand-tag">/ Built inside. Scaled outside.</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="topnav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <nav class="topnav" id="topnav" aria-label="Primary">
+      <a href="index.html">What We Do</a>
+      <a href="process.html">How We Do It</a>
+      <a href="about.html">Who We Are</a>
+      <a href="solutions.html">What We Offer</a>
+      <a href="xstart.html" class="topnav-secondary is-active">Try Xtart</a>
+      <a href="javascript:void(0)" data-cal-link="anubhav-chaturvedi-uzytoo/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view"}' class="topnav-cta">Book a Call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" aria-label="Xtart for MFDs">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="kicker">Xtart by Xtartmf   For Independent Financial Distributors</div>
+        <h1>You run on <span class="accent">Xtart</span>. Your clients invest on <span class="accent">SimpleMF</span>.</h1>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="num">40<span class="unit">+</span></div>
+          <div class="label">AMCs on a single BSE StARMF-integrated platform</div>
+        </div>
+        <div class="stat">
+          <div class="num">30<span class="unit">min</span></div>
+          <div class="label">Average onboarding from zero to first transaction</div>
+        </div>
+        <div class="stat">
+          <div class="num">10<span class="unit">hrs</span></div>
+          <div class="label">Saved per week on manual ops and reporting</div>
+        </div>
+      </div>
+    </div>
+    <p class="hero-summary">Xtart is the practice management platform for India's MFDs. You get a full back office. Your investors get SimpleMF, their own clean portal to track every rupee invested with you.</p>
+    <div class="cta-pair">
+      <a href="https://simplemf.onrender.com" target="_blank" rel="noopener" class="btn-primary">Try Xtart Free</a>
+      <a href="javascript:void(0)" data-cal-link="anubhav-chaturvedi-uzytoo/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view"}' class="btn-ghost">Book a Demo</a>
+    </div>
+  </div>
+</section>
+
+<!-- TWO-SIDED PLATFORM EXPLAINER -->
+<section class="section--soft" aria-labelledby="split-h">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num">SECTION <span class="slash">/</span> 01</div>
+      <div>
+        <h2 id="split-h">One platform. <span class="accent">Two experiences.</span></h2>
+        <p class="section-lede">Most platforms try to serve everyone on one interface. Xtart separates the MFD's back office from the investor's portal completely. Each side is built for what that person actually needs.</p>
+      </div>
+    </div>
+    <div class="two-sided">
+      <div class="side-card">
+        <div class="side-label mfd">For You   The MFD</div>
+        <div class="side-title">Xtart</div>
+        <p class="side-body">Your complete practice dashboard. Onboard clients, execute every transaction type, track commissions, manage leads, and run your back office without spreadsheets or WhatsApp. Built for how Indian MFDs actually work.</p>
+      </div>
+      <div class="side-card">
+        <div class="side-label investor">For Your Clients   The Investor</div>
+        <div class="side-title">SimpleMF</div>
+        <p class="side-body">What your investors see. A clean, mobile-ready portal branded to you where they can check their portfolio, SIP status, returns, and statements without calling you. No app download required.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT MFDs GET -->
+<section id="ifa" aria-labelledby="ifa-h">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num">SECTION <span class="slash">/</span> 02</div>
+      <div>
+        <h2 id="ifa-h">What you get on <span class="accent">Xtart</span>.</h2>
+        <p class="section-lede">Built for Indian MFDs, not adapted from a generic CRM. Every feature maps to a real workflow you run today.</p>
+      </div>
+    </div>
+    <div class="practices">
+      <article class="practice">
+        <div class="practice-num">ONBOARDING &amp; COMPLIANCE</div>
+        <h3>Go digital from day one</h3>
+        <ul class="feature-list">
+          <li>KYC verification, UCC creation, and bank mandate registration in minutes</li>
+          <li>BSE StARMF integration   transact across 40+ AMCs, fully exchange-compliant</li>
+          <li>E-Mandate and NACH   register SIP mandates digitally, no physical forms</li>
+          <li>Secure document storage for ARN certificates, KYC docs, and agreements</li>
+        </ul>
+      </article>
+      <article class="practice">
+        <div class="practice-num">PORTFOLIO &amp; TRANSACTIONS</div>
+        <h3>Every transaction, one screen</h3>
+        <ul class="feature-list">
+          <li>Unified client dashboard with portfolio, SIP status, and returns at a glance</li>
+          <li>All transaction types: purchase, redemption, switch, SIP, SWP, STP</li>
+          <li>Bulk transactions to process multiple clients simultaneously</li>
+          <li>Real-time NAV and portfolio valuation with live AMC data</li>
+        </ul>
+      </article>
+      <article class="practice">
+        <div class="practice-num">BUSINESS MANAGEMENT</div>
+        <h3>Run your back office cleanly</h3>
+        <ul class="feature-list">
+          <li>Lead management with capture, tracking, and follow-up reminders</li>
+          <li>Commission MIS for brokerage, trail income, and AMC-wise earnings</li>
+          <li>Client communication: portfolio statements, SIP reminders, market updates</li>
+          <li>Goal-based planning to build SIP proposals around client goals</li>
+        </ul>
+      </article>
+      <article class="practice">
+        <div class="practice-num">GROWTH TOOLS</div>
+        <h3>Build your book faster</h3>
+        <ul class="feature-list">
+          <li>Investor referral links so your clients bring in new investors for you</li>
+          <li>White-labelled investor portal with your brand, your clients, your platform</li>
+          <li>XIRR-based performance reports to share professionally with every client</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT INVESTORS GET (dark) -->
+<section class="section--dark" id="investors" aria-labelledby="inv-h">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num">SECTION <span class="slash">/</span> 03</div>
+      <div>
+        <h2 id="inv-h">What your clients get on <span style="color:var(--green-light)">SimpleMF</span>.</h2>
+        <p class="section-lede">Your investors get their own portal   branded, mobile-ready, always up to date. No app download. No calls to you for a balance check.</p>
+      </div>
+    </div>
+    <div class="practices">
+      <article class="practice" style="border-color:var(--rule-dark)">
+        <div class="practice-num" style="color:var(--green-light)">INVESTOR DASHBOARD</div>
+        <h3 style="color:#fff">Full visibility, anytime</h3>
+        <ul class="feature-list feature-list--dark">
+          <li>Personal investment dashboard with holdings, returns, and SIP schedule in one view</li>
+          <li>One-click SIP management to start, pause, modify, or cancel without calling you</li>
+          <li>Goal tracker showing visual progress towards retirement, education, or any goal</li>
+        </ul>
+      </article>
+      <article class="practice" style="border-color:var(--rule-dark)">
+        <div class="practice-num" style="color:var(--green-light)">STATEMENTS &amp; SECURITY</div>
+        <h3 style="color:#fff">Professional and paperless</h3>
+        <ul class="feature-list feature-list--dark">
+          <li>Consolidated statements and capital gains reports available to download instantly</li>
+          <li>Complete transaction history with a full audit trail of every investment</li>
+          <li>OTP-based login, no physical paperwork, works on any device</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section--soft" id="pricing" aria-labelledby="price-h">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num">SECTION <span class="slash">/</span> 04</div>
+      <div>
+        <h2 id="price-h">Simple pricing. <span class="accent">Start free, scale when ready.</span></h2>
+        <p class="section-lede">No setup fees. No long-term contracts. Upgrade or downgrade anytime.</p>
+      </div>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-tier">Starter</div>
+        <div class="price-amount">Free</div>
+        <div class="price-sub">Up to 50 clients</div>
+        <div class="price-row"><span>Transactions</span><span class="tick">✓</span></div>
+        <div class="price-row"><span>SimpleMF Investor Portal</span><span class="tick">✓</span></div>
+        <div class="price-row"><span>Lead Management</span><span class="cross"> </span></div>
+        <div class="price-row"><span>Commission MIS</span><span class="cross"> </span></div>
+        <div class="price-row"><span>White Label</span><span class="cross"> </span></div>
+        <div class="price-row"><span>Priority Support</span><span class="cross"> </span></div>
+        <a href="https://simplemf.onrender.com" target="_blank" rel="noopener" class="price-cta-btn">Get Started Free</a>
+      </div>
+      <div class="price-card featured">
+        <div class="price-tier">Xtart</div>
+        <div class="price-amount">₹999</div>
+        <div class="price-sub">per month · Up to 500 clients</div>
+        <div class="price-row"><span>Transactions</span><span class="tick">✓</span></div>
+        <div class="price-row"><span>SimpleMF Investor Portal</span><span class="tick">✓</span></div>
+        <div class="price-row"><span>Lead Management</span><span class="tick">✓</span></div>
+        <div class="price-row"><span>Commission MIS</span><span class="tick">✓</span></div>
+        <div class="price-row"><span>White Label</span><span class="cross"> </span></div>
+        <div class="price-row"><span>Priority Support</span><span class="cross"> </span></div>
+        <a href="https://simplemf.onrender.com" target="_blank" rel="noopener" class="price-cta-btn">Xtart Now</a>
+      </div>
+      <div class="price-card">
+        <div class="price-tier">Pro</div>
+        <div class="price-amount">₹2,499</div>
+        <div class="price-sub">per month · Unlimited clients</div>
+        <div class="price-row"><span>Transactions</span><span class="tick">✓</span></div>
+        <div class="price-row"><span>SimpleMF Investor Portal</span><span class="tick">✓</span></div>
+        <div class="price-row"><span>Lead Management</span><span class="tick">✓</span></div>
+        <div class="price-row"><span>Commission MIS</span><span class="tick">✓</span></div>
+        <div class="price-row"><span>White Label</span><span class="tick">✓</span></div>
+        <div class="price-row"><span>Priority Support</span><span class="tick">✓</span></div>
+        <a href="https://simplemf.onrender.com" target="_blank" rel="noopener" class="price-cta-btn">Go Pro</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY IT WORKS -->
+<section aria-labelledby="why-h">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num">SECTION <span class="slash">/</span> 05</div>
+      <div>
+        <h2 id="why-h">Why MFDs choose <span class="accent">Xtart</span>.</h2>
+      </div>
+    </div>
+    <div class="testimonial">
+      <p>"I used to spend 3 hours every Monday just sending portfolio updates on WhatsApp. Now my clients check it themselves on SimpleMF."</p>
+      <cite>MFD, Pune</cite>
+    </div>
+    <div class="practices" style="margin-top:32px">
+      <article class="practice">
+        <div class="practice-num">TIME</div>
+        <h3>Save 10+ hours every week</h3>
+        <p>Manual transactions, portfolio updates, SIP reminders   all automated. Spend your time advising clients, not running Excel.</p>
+      </article>
+      <article class="practice">
+        <div class="practice-num">CREDIBILITY</div>
+        <h3>Look as professional as any large firm</h3>
+        <p>A branded SimpleMF portal and clean XIRR reports show clients you're running a proper practice. Not a side business on WhatsApp.</p>
+      </article>
+      <article class="practice">
+        <div class="practice-num">GROWTH</div>
+        <h3>Built-in referral and lead capture</h3>
+        <p>Turn existing clients into a referral channel. Capture enquiries directly into your pipeline. Grow without hiring a sales team.</p>
+      </article>
+      <article class="practice">
+        <div class="practice-num">COMPLIANCE</div>
+        <h3>BSE StARMF-integrated from day one</h3>
+        <p>Every transaction is exchange-compliant by design. KYC, mandates, UCCs   built into the workflow, not bolted on after the fact.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<section class="cta-section section--last section--soft" aria-labelledby="fcta-h">
+  <div class="container">
+    <div class="cta-grid">
+      <div>
+        <div class="kicker">Built for India's Independent Financial Distributors</div>
+        <h2 id="fcta-h">Move from WhatsApp and Excel to a platform that works as hard as <span class="accent">you do</span>.</h2>
+        <p class="lede">Zero setup cost. Onboard in under 30 minutes. Your clients get SimpleMF from day one.</p>
+        <div class="cta-pair">
+          <a href="https://simplemf.onrender.com" target="_blank" rel="noopener" class="btn-primary">See SimpleMF</a>
+          <a href="javascript:void(0)" data-cal-link="anubhav-chaturvedi-uzytoo/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view"}' class="btn-ghost">Book a Demo</a>
+        </div>
+      </div>
+      <div class="cta-card">
+        <div class="label">Quick links</div>
+        <h4>Explore Xtart</h4>
+        <a href="https://simplemf.onrender.com" target="_blank" rel="noopener" class="cta-link"><span>Open the platform</span></a>
+        <a href="#pricing" class="cta-link"><span>View pricing</span></a>
+        <a href="#ifa" class="cta-link"><span>See all features</span></a>
+        <a href="javascript:void(0)" data-cal-link="anubhav-chaturvedi-uzytoo/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view"}' class="cta-link"><span>Book a demo call</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"></span><span>Xtartmf</span><span class="brand-tag">/ Built inside. Scaled outside.</span></a>
+        <p class="footer-tag">Built inside. Scaled outside.<br>Operator-led consulting for India's mutual fund distribution. A team of ex Exchanges and MIIs, IIT, and IIM professionals.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-label">Pages</div>
+        <a href="index.html">What We Do</a>
+        <a href="process.html">How We Do It</a>
+        <a href="about.html">Who We Are</a>
+        <a href="solutions.html">What We Offer</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-label">Contact</div>
+        <a href="javascript:void(0)" data-cal-link="anubhav-chaturvedi-uzytoo/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view"}'>Book a call</a>
+        <a href="xstart.html">Try Xtart</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Xtartmf, Independent Consulting Firm</span>
+      <span>Mumbai, India</span>
+    </div>
+    <p class="footer-disclaimer">Xtartmf is an independent consulting firm. Engagements are taken on a strict no-conflict basis. All views and content on this site represent the position of the Firm.</p>
+  </div>
+</footer>
+<script>
+(function(){
+  document.getElementById('year').textContent=new Date().getFullYear();
+  var tb=document.getElementById('topbar'),ls=false;
+  function sc(){var s=window.scrollY>8;if(s!==ls){tb.classList.toggle('is-scrolled',s);ls=s;}}
+  window.addEventListener('scroll',sc,{passive:true});sc();
+  var tog=document.getElementById('menuToggle'),nav=document.getElementById('topnav');
+  if(tog&&nav){tog.addEventListener('click',function(){var o=nav.classList.toggle('is-open');tog.setAttribute('aria-expanded',o);});nav.querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){nav.classList.remove('is-open');tog.setAttribute('aria-expanded','false');});});}
+})();
+</script>
+<script type="text/javascript">(function(C,A,L){let p=function(a,ar){a.q.push(ar);};let d=C.document;C.Cal=C.Cal||function(){let cal=C.Cal;let ar=arguments;if(!cal.loaded){cal.ns={};cal.q=cal.q||[];d.head.appendChild(d.createElement("script")).src=A;cal.loaded=true;}if(ar[0]===L){const api=function(){p(api,arguments);};const namespace=ar[1];api.q=api.q||[];if(typeof namespace==="string"){cal.ns[namespace]=cal.ns[namespace]||api;p(cal.ns[namespace],ar);p(cal,["initNamespace",namespace]);}else p(cal,ar);return;}p(cal,ar);};})(window,"https://app.cal.com/embed/embed.js","init");Cal("init","30min",{origin:"https://app.cal.com"});Cal.ns["30min"]("floatingButton",{"calLink":"anubhav-chaturvedi-uzytoo/30min","buttonText":"Book a Call","config":{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}});Cal.ns["30min"]("ui",{"hideEventTypeDetails":false,"layout":"month_view"});</script>
+</body>
+</html>
